@@ -11,18 +11,74 @@
         <scene sceneID="xgI-bC-UA0">
             <objects>
                 <tableViewController id="A1G-Qw-dMv" customClass="MainViewController" customModule="Lovely_Places" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="0nQ-E1-22d">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="85" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="0nQ-E1-22d">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="suG-VV-pIO">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="suG-VV-pIO" customClass="CustomTableViewCell" customModule="Lovely_Places" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="85"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="suG-VV-pIO" id="Set-U4-VPE">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="85"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jpJ-oP-fl7">
+                                            <rect key="frame" x="15" y="10" width="65" height="65"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="65" id="DHN-lr-jLa"/>
+                                                <constraint firstAttribute="width" constant="65" id="Jou-Vm-Qbf"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Io-1j-g3F">
+                                            <rect key="frame" x="95" y="10" width="299" height="22"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="22" id="Ddy-Da-9eZ"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nls-Qj-xnE">
+                                            <rect key="frame" x="95" y="35" width="315" height="18"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="18" id="6cG-fr-swJ"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YHU-7d-Eug">
+                                            <rect key="frame" x="95" y="54" width="299" height="18"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="18" id="F5M-EU-qWm"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="13"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="YHU-7d-Eug" secondAttribute="bottom" constant="2" id="49m-Ms-gfV"/>
+                                        <constraint firstItem="8Io-1j-g3F" firstAttribute="top" secondItem="Set-U4-VPE" secondAttribute="top" constant="10" id="DwU-tL-14K"/>
+                                        <constraint firstItem="nls-Qj-xnE" firstAttribute="leading" secondItem="jpJ-oP-fl7" secondAttribute="trailing" constant="15" id="MX7-hf-Uto"/>
+                                        <constraint firstItem="YHU-7d-Eug" firstAttribute="leading" secondItem="jpJ-oP-fl7" secondAttribute="trailing" constant="15" id="TlY-ce-HrF"/>
+                                        <constraint firstItem="jpJ-oP-fl7" firstAttribute="centerY" secondItem="Set-U4-VPE" secondAttribute="centerY" id="VqB-Q1-FW7"/>
+                                        <constraint firstItem="YHU-7d-Eug" firstAttribute="top" secondItem="nls-Qj-xnE" secondAttribute="bottom" constant="1" id="cQW-3w-0Rx"/>
+                                        <constraint firstItem="nls-Qj-xnE" firstAttribute="trailing" secondItem="Set-U4-VPE" secondAttribute="trailingMargin" constant="16" id="fOk-hO-R4L"/>
+                                        <constraint firstItem="YHU-7d-Eug" firstAttribute="trailing" secondItem="Set-U4-VPE" secondAttribute="trailingMargin" id="hnv-Qw-pLg"/>
+                                        <constraint firstAttribute="trailing" secondItem="8Io-1j-g3F" secondAttribute="trailing" constant="20" symbolic="YES" id="kRr-B5-tcf"/>
+                                        <constraint firstItem="nls-Qj-xnE" firstAttribute="top" secondItem="8Io-1j-g3F" secondAttribute="bottom" constant="3" id="mDe-gl-PYQ"/>
+                                        <constraint firstItem="jpJ-oP-fl7" firstAttribute="leading" secondItem="Set-U4-VPE" secondAttribute="leading" constant="15" id="uBI-fN-TmE"/>
+                                        <constraint firstItem="8Io-1j-g3F" firstAttribute="leading" secondItem="jpJ-oP-fl7" secondAttribute="trailing" constant="15" id="uRA-20-lJV"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="imageOfPlace" destination="jpJ-oP-fl7" id="iH7-l4-ZOR"/>
+                                    <outlet property="locationLabel" destination="nls-Qj-xnE" id="Bk5-oe-ple"/>
+                                    <outlet property="nameLabel" destination="8Io-1j-g3F" id="yTA-Yf-Cbq"/>
+                                    <outlet property="typeLabel" destination="YHU-7d-Eug" id="nua-6z-XrM"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
